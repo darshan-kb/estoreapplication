@@ -1,6 +1,6 @@
 package com.estore.estoreapplication.entities;
 
-public class myAccount {
+public class Seller {
 	int id;
 	int mobno;
 	String name;
@@ -57,7 +57,7 @@ public class myAccount {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public myAccount(int id, int mobno, String name, String password, String city, String state, String country,
+	public Seller(int id, int mobno, String name, String password, String city, String state, String country,
 			String address) {
 		super();
 		this.id = id;
@@ -69,6 +69,5 @@ public class myAccount {
 		this.country = country;
 		this.address = address;
 	}
-	
 	
 }

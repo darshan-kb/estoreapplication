@@ -1,5 +1,5 @@
 package com.estore.estoreapplication.controller;
 
-public class home {
+public class UserController {
 
 }
