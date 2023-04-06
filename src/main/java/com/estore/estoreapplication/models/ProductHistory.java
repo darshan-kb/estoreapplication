@@ -6,6 +6,7 @@ public class ProductHistory {
 	private int USER_ID;
 	private String PRODUCT_DESC;
 	private long ORDER_CODE;
+	private String PRODUCT_CODE;
 	private OrderStatus ORDER_STATUS;
 	private String PRODUCT_NAME;
 	private Date ORDER_CREATION_DATE;
@@ -20,7 +21,7 @@ public class ProductHistory {
 	private String SHIP_TO_EMAIL;
 	private String SHIP_TO_PHONE_NO;
 	private int SHIP_TO_POSTAL_CODE;
-	public ProductHistory(int uSER_ID, String pRODUCT_DESC, long oRDER_CODE, OrderStatus oRDER_STATUS,
+	public ProductHistory(int uSER_ID, String pRODUCT_DESC, long oRDER_CODE, String pRODUCT_CODE, OrderStatus oRDER_STATUS,
 			String pRODUCT_NAME, Date oRDER_CREATION_DATE, int oRDER_QUANTITY, double oRDER_AMOUNT,
 			double oRDER_DISCOUNT_PRICE, PaymentMethod pAYMENT_METHOD, String sHIP_TO_ADDRESS, String sHIP_TO_CITY,
 			String sHIP_TO_FIRSTNAME, String sHIP_TO_LASTNAME, String sHIP_TO_EMAIL, String sHIP_TO_PHONE_NO,
@@ -29,6 +30,7 @@ public class ProductHistory {
 		USER_ID = uSER_ID;
 		PRODUCT_DESC = pRODUCT_DESC;
 		ORDER_CODE = oRDER_CODE;
+		PRODUCT_CODE = pRODUCT_CODE;
 		ORDER_STATUS = oRDER_STATUS;
 		PRODUCT_NAME = pRODUCT_NAME;
 		ORDER_CREATION_DATE = oRDER_CREATION_DATE;
@@ -158,6 +160,12 @@ public class ProductHistory {
 				+ ", SHIP_TO_ADDRESS=" + SHIP_TO_ADDRESS + ", SHIP_TO_CITY=" + SHIP_TO_CITY + ", SHIP_TO_FIRSTNAME="
 				+ SHIP_TO_FIRSTNAME + ", SHIP_TO_LASTNAME=" + SHIP_TO_LASTNAME + ", SHIP_TO_EMAIL=" + SHIP_TO_EMAIL
 				+ ", SHIP_TO_PHONE_NO=" + SHIP_TO_PHONE_NO + ", SHIP_TO_POSTAL_CODE=" + SHIP_TO_POSTAL_CODE + "]";
+	}
+	public String getPRODUCT_CODE() {
+		return PRODUCT_CODE;
+	}
+	public void setPRODUCT_CODE(String pRODUCT_CODE) {
+		PRODUCT_CODE = pRODUCT_CODE;
 	}
 	
 	
