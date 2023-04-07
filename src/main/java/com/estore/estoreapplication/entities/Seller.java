@@ -1,8 +1,16 @@
 package com.estore.estoreapplication.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Seller {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	int id;
-	int mobno;
+	long mobno;
 	String name;
 	String password;
 	String city;
@@ -15,7 +23,7 @@ public class Seller {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getMobno() {
+	public long getMobno() {
 		return mobno;
 	}
 	public void setMobno(int mobno) {
@@ -57,7 +65,7 @@ public class Seller {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public Seller(int id, int mobno, String name, String password, String city, String state, String country,
+	public Seller(int id, long mobno, String name, String password, String city, String state, String country,
 			String address) {
 		super();
 		this.id = id;

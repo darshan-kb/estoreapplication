@@ -10,20 +10,27 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	int id;
-	int mobno;
+	long mobno;
+	String email;
 	String name;
 	String password;
 	String city;
 	String state;
 	String country;
 	String address;
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getMobno() {
+	public long getMobno() {
 		return mobno;
 	}
 	public void setMobno(int mobno) {
@@ -65,7 +72,10 @@ public class User {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public User(int id, int mobno, String name, String password, String city, String state, String country,
+	public User() {
+		
+	}
+	public User(int id, long mobno, String name, String password, String city, String state, String country,
 			String address) {
 		super();
 		this.id = id;
