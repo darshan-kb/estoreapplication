@@ -6,24 +6,17 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class User {
+public class Seller {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	int id;
 	long mobno;
-	String email;
 	String name;
 	String password;
 	String city;
 	String state;
 	String country;
 	String address;
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
 	public int getId() {
 		return id;
 	}
@@ -72,10 +65,7 @@ public class User {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public User() {
-		
-	}
-	public User(int id, long mobno, String name, String password, String city, String state, String country,
+	public Seller(int id, long mobno, String name, String password, String city, String state, String country,
 			String address) {
 		super();
 		this.id = id;
@@ -87,4 +77,5 @@ public class User {
 		this.country = country;
 		this.address = address;
 	}
+	
 }
