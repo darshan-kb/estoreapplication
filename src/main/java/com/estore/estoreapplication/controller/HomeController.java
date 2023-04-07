@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
 	@RequestMapping("/home")
 	public String Home() {
-		return "EstoreHome.js";
+		return "home.html";
 	}
 }
